@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>RollCall.ico</ApplicationIcon>
+    <Authors>SkyMeng</Authors>
+    <Company>$(AssemblyName)</Company>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="BxBxsEdit %281%29.png" />
+    <None Remove="font\c682dd26689a705d4f0660eb70baeda7.ttf" />
+    <None Remove="font\ja-jp.ttf" />
+    <None Remove="font\SourceHanSansCN-Bold.otf" />
+    <None Remove="font\SourceHanSansCN-ExtraLight.otf" />
+    <None Remove="font\SourceHanSansCN-Heavy.otf" />
+    <None Remove="font\SourceHanSansCN-Light.otf" />
+    <None Remove="font\SourceHanSansCN-Medium.otf" />
+    <None Remove="font\SourceHanSansCN-Normal.otf" />
+    <None Remove="font\SourceHanSansCN-Regular.otf" />
+    <None Remove="font\汉仪文黑-85W.ttf" />
+    <None Remove="RollCall.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>7</VersionMinor>
+      <VersionMajor>8</VersionMajor>
+      <Guid>00020905-0000-0000-c000-000000000046</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>9</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>00020813-0000-0000-c000-000000000046</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="BxBxsEdit (1).png" />
+    <Resource Include="font\c682dd26689a705d4f0660eb70baeda7.ttf" />
+    <Resource Include="font\ja-jp.ttf" />
+    <Resource Include="font\SourceHanSansCN-Bold.otf" />
+    <Resource Include="font\SourceHanSansCN-ExtraLight.otf" />
+    <Resource Include="font\SourceHanSansCN-Heavy.otf" />
+    <Resource Include="font\SourceHanSansCN-Light.otf" />
+    <Resource Include="font\SourceHanSansCN-Medium.otf" />
+    <Resource Include="font\SourceHanSansCN-Normal.otf" />
+    <Resource Include="font\SourceHanSansCN-Regular.otf" />
+    <Resource Include="font\汉仪文黑-85W.ttf" />
+    <Resource Include="RollCall.ico" />
+  </ItemGroup>
+
+</Project>

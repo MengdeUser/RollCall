@@ -1,0 +1,97 @@
+﻿<Window x:Class="RollCall_Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RollCall_Windows"
+        mc:Ignorable="d" Background="#FF303030" Foreground="{x:Null}" Icon="/RollCall.ico"
+        Title="RollCall基础设置" Width="1000" Height="600" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" FontFamily="HarmonyOS Sans">
+    <Grid>
+        <Border Background="#FF009BFF" VerticalAlignment="Top">
+            <StackPanel VerticalAlignment="Top" Orientation="Horizontal">
+                <Label Content="RollCall基础设置" FontSize="36" Padding="10,10,10,10" VerticalContentAlignment="Center" FontFamily="HarmonyOS Sans SC" FontWeight="Bold"/>
+                <Line Stroke="#FF373737" Y1="1" Y2="60" VerticalAlignment="Center" StrokeThickness="2" Width="20" X1="10" X2="10"/>
+                <Label Content="欢迎" FontSize="36" VerticalContentAlignment="Center" Background="#FF009BFF" BorderBrush="{x:Null}" FontFamily="HarmonyOS Sans SC" FontWeight="Bold" Padding="10,10,10,10"/>
+                <Label Content="基础" FontSize="36" VerticalContentAlignment="Center" Background="#FF009BFF" BorderBrush="{x:Null}" FontFamily="HarmonyOS Sans SC" FontWeight="Bold" Padding="10,10,10,10"/>
+                <Label Content="完成" FontSize="36" VerticalContentAlignment="Center" Background="#FF009BFF" BorderBrush="{x:Null}" FontFamily="HarmonyOS Sans SC" FontWeight="Bold" Padding="10,10,10,10"/>
+            </StackPanel>
+        </Border>
+        <Border x:Name="privacy"  Margin="0,67.72,0,0">
+            <Border.BorderBrush>
+                <RadialGradientBrush>
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.9"/>
+                </RadialGradientBrush>
+            </Border.BorderBrush>
+            <StackPanel x:Name="SP" Orientation="Horizontal" Margin="20,20,20,20">
+                <Image Height="64" Width="64" VerticalAlignment="Top" Source="/RollCall.ico"/>
+                <Label Content="欢迎使用RollCall" VerticalAlignment="Top" Foreground="White" FontFamily="HarmonyOS Sans SC Medium" FontSize="24" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <CheckBox x:Name="Check" Content="我已阅读并同意" VerticalAlignment="Top" FontFamily="HarmonyOS Sans SC Light" FontSize="20" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="-185,64,0,0" HorizontalAlignment="Left" Checked="CheckBox_Checked"/>
+                <Button Content="《RollCall隐私政策》" VerticalAlignment="Top" FontSize="16" FontFamily="HarmonyOS Sans SC Light" BorderBrush="{x:Null}" Foreground="#FF59A0D6" Padding="4,1,0,0" Click="Button_Click" Margin="-25,64,0,0" HorizontalAlignment="Left">
+                    <Button.Background>
+                        <SolidColorBrush Color="#FF59A0D6" Opacity="0.2"/>
+                    </Button.Background>
+                </Button>
+                <Label Content="。" Foreground="White" FontSize="16" FontFamily="HarmonyOS Sans SC Light" Padding="0,5,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,64,0,0"/>
+            </StackPanel>
+        </Border>
+        <Border x:Name="privacy1"  Margin="0,67.72,0,0" Visibility="Collapsed">
+            <Border.BorderBrush>
+                <RadialGradientBrush>
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.9"/>
+                </RadialGradientBrush>
+            </Border.BorderBrush>
+            <StackPanel x:Name="SP1" Margin="20,20,20,20">
+                <Label Content="基础设置" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="HarmonyOS Sans SC Medium" FontSize="24" Padding="0,0,0,0"/>
+                <Border CornerRadius="5" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Background="#FF424242" Padding="5,5,10,5">
+                    <StackPanel>
+                        <Image Source="/BxBxsEdit (1).png" Width="64" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Label Content="设置点名名单" Foreground="White" FontSize="22" Margin="64,-64,0,0" VerticalAlignment="Top" FontFamily="HarmonyOS Sans SC Medium"/>
+                        <Label Content="在此设置点名名单，以完善点名内容，后续更改名单在设置里修改。" Foreground="White" FontSize="18" FontFamily="HarmonyOS Sans SC Light" Margin="64,-37.94,0,0" VerticalAlignment="Bottom"/>
+                        <Button Content="修改" VerticalAlignment="Center" Margin="650,-64,0,0" HorizontalAlignment="Left" FontSize="24" FontFamily="HarmonyOS Sans TC Medium" Background="#FF566773" BorderBrush="{x:Null}" Foreground="White" Padding="5,5,5,5" Click="Button_Click_1">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5" />
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Border>
+        <Border x:Name="privacy2"  Margin="0,67.72,0,0" Visibility="Collapsed">
+            <Border.BorderBrush>
+                <RadialGradientBrush>
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.9"/>
+                </RadialGradientBrush>
+            </Border.BorderBrush>
+            <StackPanel x:Name="SP2" Margin="20,20,20,20">
+                <Label Content="完成" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="HarmonyOS Sans SC Medium" FontSize="24" Padding="0,0,0,0"/>
+                <Label Content="    点击 完成 按钮即可进入程序。" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="HarmonyOS Sans SC Light" FontSize="20" Padding="0,0,0,0"/>
+            </StackPanel>
+        </Border>
+        <Button x:Name="Last" Content="←上一步" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontFamily="HarmonyOS Sans SC Medium" FontSize="20" BorderBrush="{x:Null}" Foreground="#FF59A0D6" Padding="5,5,5,5" Margin="0,0,115,15" Click="Last_Click" Visibility="Collapsed">
+            <Button.Background>
+                <SolidColorBrush Color="#FF59A0D6" Opacity="0.2"/>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5" />
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="Next" Content="下一步→" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontFamily="HarmonyOS Sans SC Medium" FontSize="20" BorderBrush="{x:Null}" Foreground="#FF59A0D6" Padding="5,5,5,5" IsEnabled="False" Margin="0,0,15,15" Click="Next_Click">
+            <Button.Background>
+                <SolidColorBrush Color="#FF59A0D6" Opacity="0.2"/>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5" />
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>
