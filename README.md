@@ -1,10 +1,3 @@
----
-title: RollCall帮助文档
-date: 2025-02-09 18:30:00
-type: "tags"
-cover: /img/RollCall.png
----
-
 # RollCall帮助文档
 
 ## 概述
@@ -92,9 +85,3 @@ RollCall是一个用于随机点名的WPF应用程序。它可以从本地文件
 • 官方邮箱：mengde_user@163.com
 
 # 感谢您使用RollCall！
-
----
-
-# RollCall_Windows 下载
-
-{% btn '/setup/RollCall_Windows.exe',点击即可下载,anzhiyufont anzhiyu-icon-circle-arrow-right,block %}
