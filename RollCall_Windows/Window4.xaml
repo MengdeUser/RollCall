@@ -22,7 +22,7 @@
                 </Label>
                 <Border>
                     <StackPanel Orientation="Horizontal" Margin="0,20,0,20" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <Button x:Name="ButtonStart" Content="随机抽选" BorderBrush="{x:Null}" Foreground="#FF59A0D6" FontFamily="HarmonyOS Sans SC" FontSize="20" Padding="10,20,10,20" Margin="0,0,10,0" Click="ButtonStart_Click" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button x:Name="ButtonStart" Content="随机抽选" BorderBrush="{x:Null}" Foreground="#FF59A0D6" FontFamily="HarmonyOS Sans SC" FontSize="20" Padding="10,20,10,20" Margin="0,0,10,0" Click="ButtonStart_Click" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" IsDefault="True">
                             <Button.Background>
                                 <SolidColorBrush Color="#FF59A0D6" Opacity="0.2"/>
                             </Button.Background>

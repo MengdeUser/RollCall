@@ -34,7 +34,7 @@
             <StackPanel Margin="20">
                 <ListBox x:Name="ListBoxTextLines" d:ItemsSource="{d:SampleData ItemCount=15}" FontFamily="HarmonyOS Sans SC Medium" FontSize="18" Width="620" Height="450"/>
                 <TextBox x:Name="TextBoxInput" Text="请输入内容" FontFamily="HarmonyOS Sans SC Medium" FontSize="20" Margin="0,10,0,0" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" />
-                <Button Content="添加" Margin="210,-30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="HarmonyOS Sans SC Medium" FontSize="20" Foreground="#FF59A0D6" BorderBrush="{x:Null}" Width="60" Height="30" Click="Button_Click_3">
+                <Button Content="添加" Margin="210,-30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="HarmonyOS Sans SC Medium" FontSize="20" Foreground="#FF59A0D6" BorderBrush="{x:Null}" Width="60" Height="30" Click="Button_Click_3" IsDefault="True">
                     <Button.Background>
                         <SolidColorBrush Color="#FF59A0D6" Opacity="0.2"/>
                     </Button.Background>

@@ -1,4 +1,7 @@
-﻿using System.Windows;
+﻿using Microsoft.Win32;
+using System.Windows;
+using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace RollCall_Windows
 {
@@ -78,9 +81,13 @@ namespace RollCall_Windows
             else if (page == 3)
             {
                 Last.Visibility = Visibility.Visible;
-                Window3 window3 = new Window3();
-                window3.Show();
-                this.Close();
+                using (RegistryKey key = Registry.CurrentUser.CreateSubKey("SOFTWARE\\RollCall"))
+                {
+                    // 如果没有FirstRun键，运行Window3
+                    key.SetValue("FirstRun", "true"); // 创建FirstRun键
+                    new Window3().Show();
+                    this.Close();
+                }
             }
         }
 

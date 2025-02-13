@@ -83,7 +83,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="Next" Content="下一步→" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontFamily="HarmonyOS Sans SC Medium" FontSize="20" BorderBrush="{x:Null}" Foreground="#FF59A0D6" Padding="5,5,5,5" IsEnabled="False" Margin="0,0,15,15" Click="Next_Click">
+        <Button x:Name="Next" Content="下一步→" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontFamily="HarmonyOS Sans SC Medium" FontSize="20" BorderBrush="{x:Null}" Foreground="#FF59A0D6" Padding="5,5,5,5" IsEnabled="False" Margin="0,0,15,15" Click="Next_Click" IsDefault="True">
             <Button.Background>
                 <SolidColorBrush Color="#FF59A0D6" Opacity="0.2"/>
             </Button.Background>

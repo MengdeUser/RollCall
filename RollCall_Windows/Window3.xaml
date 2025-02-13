@@ -6,23 +6,180 @@
         xmlns:tb="http://www.hardcodet.net/taskbar"
         xmlns:local="clr-namespace:RollCall_Windows"
         mc:Ignorable="d" Background="Transparent" ShowInTaskbar="False" Icon="/RollCall.ico" FontFamily="HarmonyOS Sans SC" WindowStyle="None" Topmost="True" HorizontalAlignment="Left" VerticalAlignment="Center" AllowsTransparency="True" ResizeMode="NoResize" Foreground="{x:Null}" Height="90">
-    <Grid Margin="10,0,0,0">
-        <tb:TaskbarIcon x:Name="tb" IconSource="/RollCall.ico" ToolTipText="RollCall主程序" NoLeftClickDelay="True">
-            <tb:TaskbarIcon.ContextMenu>
-                <ContextMenu>
-                    <MenuItem Header="RollCall"/>
-                    <MenuItem Header="帮助" Click="Help_Click"/>
-                    <Separator />
-                    <MenuItem Header="显隐程序" Click="OpenProgram_Click"/>
-                    <MenuItem Header="修改名单" Click="MenuItem_Click"/>
-                    <Separator />
-                    <MenuItem Header="退出" Click="Exit_Click"/>
-                </ContextMenu>
-            </tb:TaskbarIcon.ContextMenu>
+    <Grid Margin="10">
+        <tb:TaskbarIcon x:Name="tb" IconSource="/RollCall.ico" ToolTipText="RollCall" NoLeftClickDelay="True" PopupActivation="RightClick">
+            <tb:TaskbarIcon.TrayPopup>
+                <Border CornerRadius="3" Background="#FF303030">
+                    <StackPanel Margin="0,15,0,15">
+                        <Button Content="RollCall" Click="RollCall_Click" FontFamily="HarmonyOS Sans SC Light" FontSize="16" BorderBrush="{x:Null}" Padding="25,5,25,5" VerticalContentAlignment="Center">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Border x:Name="border"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}" Padding="25,5,25,5">
+                                                    <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                                </Border>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter TargetName="border" Property="Background" Value="#FF4B4B4B"/>
+                                                    </Trigger>
+                                                    <Trigger Property="IsPressed" Value="True">
+                                                        <Setter TargetName="border" Property="Background" Value="#FF797979"/>
+                                                    </Trigger>
+                                                    <Trigger Property="IsMouseOver" Value="False">
+                                                        <Setter TargetName="border" Property="Background" Value="Transparent"/>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <Button Content="帮助" Click="Help_Click" FontFamily="HarmonyOS Sans SC Light" FontSize="16" BorderBrush="{x:Null}" Padding="25,5,25,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Left">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Border x:Name="border"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}" Padding="25,5,25,5">
+                                                    <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                                </Border>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter TargetName="border" Property="Background" Value="#FF4B4B4B"/>
+                                                    </Trigger>
+                                                    <Trigger Property="IsPressed" Value="True">
+                                                        <Setter TargetName="border" Property="Background" Value="#FF797979"/>
+                                                    </Trigger>
+                                                    <Trigger Property="IsMouseOver" Value="False">
+                                                        <Setter TargetName="border" Property="Background" Value="Transparent"/>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <Line Stroke="#FF6C6C6C" StrokeThickness="1" X2="130" Margin="0,5,0,5" />
+                        <Button Content="显隐程序" Click="OpenProgram_Click" FontFamily="HarmonyOS Sans SC Light" FontSize="16" BorderBrush="{x:Null}" Padding="25,5,25,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Left">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Border x:Name="border"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}" Padding="25,5,25,5">
+                                                    <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                                </Border>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter TargetName="border" Property="Background" Value="#FF4B4B4B"/>
+                                                    </Trigger>
+                                                    <Trigger Property="IsPressed" Value="True">
+                                                        <Setter TargetName="border" Property="Background" Value="#FF797979"/>
+                                                    </Trigger>
+                                                    <Trigger Property="IsMouseOver" Value="False">
+                                                        <Setter TargetName="border" Property="Background" Value="Transparent"/>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <Button Content="修改名单" Click="MenuItem_Click" FontFamily="HarmonyOS Sans SC Light" FontSize="16" BorderBrush="{x:Null}" Padding="25,5,25,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Left">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Border x:Name="border"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}" Padding="25,5,25,5">
+                                                    <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                                </Border>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter TargetName="border" Property="Background" Value="#FF4B4B4B"/>
+                                                    </Trigger>
+                                                    <Trigger Property="IsPressed" Value="True">
+                                                        <Setter TargetName="border" Property="Background" Value="#FF797979"/>
+                                                    </Trigger>
+                                                    <Trigger Property="IsMouseOver" Value="False">
+                                                        <Setter TargetName="border" Property="Background" Value="Transparent"/>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <Line Stroke="#FF6C6C6C" StrokeThickness="1" X2="130" Margin="0,5,0,5" />
+                        <Button Content="退出" Click="Exit_Click" FontFamily="HarmonyOS Sans SC Light" FontSize="16" BorderBrush="{x:Null}" Padding="25,5,25,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Left">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Border x:Name="border"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}" Padding="25,5,25,5">
+                                                    <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                                </Border>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter TargetName="border" Property="Background" Value="#FF4B4B4B"/>
+                                                    </Trigger>
+                                                    <Trigger Property="IsPressed" Value="True">
+                                                        <Setter TargetName="border" Property="Background" Value="#FF797979"/>
+                                                    </Trigger>
+                                                    <Trigger Property="IsMouseOver" Value="False">
+                                                        <Setter TargetName="border" Property="Background" Value="Transparent"/>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                    </StackPanel>
+                </Border>
+            </tb:TaskbarIcon.TrayPopup>
         </tb:TaskbarIcon>
         <Border>
             <StackPanel Orientation="Horizontal">
-                <Button Content="点名" FontFamily="HarmonyOS Sans SC Black" FontSize="36" Padding="10,10,10,10" BorderBrush="{x:Null}" Foreground="#FF59A0D6" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Button_Click">
+                <Button Content="点名" FontFamily="HarmonyOS Sans SC Black" FontSize="36" Padding="10,10,10,10" BorderBrush="{x:Null}" Foreground="#FF59A0D6" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Button_Click" IsDefault="True">
                     <Button.Background>
                         <SolidColorBrush Color="#FF59A0D6" Opacity="0.2"/>
                     </Button.Background>

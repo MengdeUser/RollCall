@@ -60,7 +60,26 @@ namespace RollCall_Windows
 
         private void Help_Click(object sender, RoutedEventArgs e)
         {
-            string url = "https://www.example.com"; // 替换为你的目标链接
+            string url = "https://github.com/MengdeUser/RollCall/#rollcall%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3"; // 替换为你的目标链接
+            try
+            {
+                // 使用默认浏览器打开链接
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                // 如果打开链接失败，显示错误信息
+                MessageBox.Show($"无法打开链接：{ex.Message}", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void RollCall_Click(object sender, RoutedEventArgs e)
+        {
+            string url = "https://github.com/MengdeUser/RollCall/"; // 替换为你的目标链接
             try
             {
                 // 使用默认浏览器打开链接

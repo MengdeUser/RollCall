@@ -1,0 +1,44 @@
+﻿<Window x:Class="RollCall_Windows.Setup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RollCall_Windows"
+        mc:Ignorable="d" Foreground="{x:Null}" Icon="/RollCall.ico"
+        Title="RollCall点名启动" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" ShowInTaskbar="False" FontFamily="HarmonyOS Sans SC" Width="400" Height="100" WindowStyle="None" Topmost="True" AllowsTransparency="True" Background="{x:Null}">
+    <Grid>
+        <Border BorderBrush="#FF0078FF" BorderThickness="1">
+            <Border.Background>
+                <SolidColorBrush Color="#FF303030" Opacity="0.5"/>
+            </Border.Background>
+        </Border>
+        <Border VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                <Image Height="45" Width="45" Source="/RollCall.ico" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+                <Label Content="RollCall" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="HarmonyOS Sans Black" FontSize="40" Padding="0,0,0,0"/>
+            </StackPanel>
+        </Border>
+        <Border VerticalAlignment="Bottom">
+            <StackPanel VerticalAlignment="Bottom">
+                <Label Content="正在启动..." HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontFamily="HarmonyOS Sans Black" FontSize="18" Margin="25,0,0,3" Padding="0,0,0,0"/>
+                <ed:Arc Width="20" Height="20" StartAngle="0" EndAngle="90" Stretch="None" ArcThickness="3" Fill="#FF0078FF" HorizontalAlignment="Left" Margin="5,-30,0,0">
+                    <ed:Arc.Triggers>
+                        <EventTrigger RoutedEvent="Loaded">
+                            <BeginStoryboard>
+                                <Storyboard RepeatBehavior="Forever">
+                                    <DoubleAnimation Storyboard.TargetProperty="StartAngle" To="360" BeginTime="0:0:0" Duration="0:0:2"/>
+                                    <DoubleAnimation Storyboard.TargetProperty="EndAngle" To="360" BeginTime="0:0:0" Duration="0:0:1.5"/>
+                                    <DoubleAnimation Storyboard.TargetProperty="EndAngle" To="450" BeginTime="0:0:1.5" Duration="0:0:0.5"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </ed:Arc.Triggers>
+                </ed:Arc>
+                <Label x:Name="InfoText" Content="初始化状态中..." HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontFamily="HarmonyOS Sans SC Light" Padding="0,0,0,0" FontSize="10"/>
+                <ProgressBar x:Name="DownloadProgressBar" Height="5" Foreground="#FF0078FF" BorderBrush="{x:Null}" Background="{x:Null}"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
