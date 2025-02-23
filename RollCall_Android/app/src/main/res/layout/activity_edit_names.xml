@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#303030"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/etNewName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        android:hint="输入新名字"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnAddName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#D63359A0"
+        android:text="添加名字"
+        android:textColor="#59A0D6" />
+
+    <Button
+        android:id="@+id/btnImportNames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#D63359A0"
+        android:text="导入名单文件"
+        android:textColor="#59A0D6" />
+
+    <Button
+        android:id="@+id/btnExportNames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#D63359A0"
+        android:text="导出名单文件"
+        android:textColor="#59A0D6" />
+
+    <ListView
+        android:id="@+id/lvNames"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white" />
+
+    <Button
+        android:id="@+id/btnDeleteName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#D63359A0"
+        android:text="删除选中名字"
+        android:textColor="#59A0D6" />
+
+    <Button
+        android:id="@+id/btnSaveNames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#D63359A0"
+        android:text="保存并返回"
+        android:textColor="#59A0D6" />
+</LinearLayout>

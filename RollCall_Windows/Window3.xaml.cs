@@ -60,7 +60,7 @@ namespace RollCall_Windows
 
         private void Help_Click(object sender, RoutedEventArgs e)
         {
-            string url = "https://github.com/MengdeUser/RollCall/#rollcall%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3"; // 替换为你的目标链接
+            string url = "https://mengdeuser.github.io/RollCall-Website/"; // 替换为你的目标链接
             try
             {
                 // 使用默认浏览器打开链接

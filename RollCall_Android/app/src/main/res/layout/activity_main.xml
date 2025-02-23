@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#303030"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <com.example.rollcall.CustomTextView
+        android:id="@+id/tvSelectedName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#D63359A0"
+        android:paddingLeft="20px"
+        android:paddingTop="20px"
+        android:paddingRight="20px"
+        android:paddingBottom="20px"
+        android:text="RollCall"
+        android:textColor="#59A0D6"
+        android:textIsSelectable="false"
+        android:gravity="center"
+        android:textSize="70sp"
+        app:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnPickName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#D63359A0"
+        android:text="随机点名"
+        android:textColor="#59A0D6"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnEndRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#D63359A0"
+        android:text="结束当前轮次"
+        android:textColor="#59A0D6"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnEditNames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#D63359A0"
+        android:text="编辑名单"
+        android:textColor="#59A0D6"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnViewHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#D63359A0"
+        android:text="查看点名历史"
+        android:textColor="#59A0D6"
+        android:textSize="16sp" />
+</LinearLayout>
